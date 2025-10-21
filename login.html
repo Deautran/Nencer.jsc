@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nencer.JSC</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- Begin box login -->
+    <div id="login_box" class="card-section col-md-3">
+        <h1 class="text-center">Đăng nhập</h1>
+        <br>
+        <form action="server.java" method="post" id="login_form">
+            <label for="Email"><strong>Email</strong> <span class="text-danger">*</span></label>
+            <input type="email" name="email" placeholder="Example@gmail.com" class="form-control">
+            <br>
+            <label for="Password"><strong>Mật khẩu</strong> <span class="text-danger">*</span></label>
+            <input type="password" name="password" placeholder="" class="form-control">
+            <br>
+            <button type="submit" class="btn btn-primary float-right">Đăng nhập</button>
+        </form>
+    </div>
+    <!-- End box login -->
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/jQueryValidate.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nencer.JSC</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div id="main">
+        <!-- Begin-->
+        <div id="header">
+            <div class="container">
+                <form action="" method="get"> 
+                <div class="row">                  
+                    <div class="col-md-3">
+                        <label for="id" class="text-bold">Mã đơn hàng</label>
+                        <input type="text" name="id" placeholder="001" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="category" class="text-bold">Danh mục</label>
+                        <select name="category" id="category" class="form-control">
+                            <option value="phone">Điện thoại</option>
+                            <option value="laptop">Lap top</option>
+                            <option value="pc">PC</option>
+                            <option value="other">Phụ kiện</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="" class="text-bold">Tìm kiếm từ ngày</label>
+                        <input type="datetime-local" name="from_date" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="" class="text-bold">Tìm kiếm đến ngày</label>
+                        <input type="datetime-local" name="to_date" class="form-control">
+                        <br>
+                        <button type="submit" class="btn btn-primary float-right">Tìm kiếm</button>
+                    </div>                   
+                </div>
+                </form>
+            </div>
+        </div>
+        <!-- End header-->
+        <div class="clear-fix"></div>
+        <!-- Begin content -->
+        <div id="content">
+            <div class="container">
+                <div class="col-md-12">
+                    <a href="employee_index.html" class="btn btn-secondary">Danh sách đơn hàng</a>
+                </div>
+                <div class="col-md-4 card-section" id="section-create-receipt">
+                    <h3 class="text-center">Thêm đơn hàng</h3>
+                    <!-- multipart/form data cho phep gui file da phuong tien -->
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <label for="receipt_name">Tên đơn hàng <span calss="text-danger">*</span></label>
+                        <input type="text" name="receipt_name" id="receipt_name" class="form-control" placeholder="Ten don hang">
+                        <br>
+                        <label for="category">Danh mục <span class="text-danger">*</span></label>
+                        <select name="category" id="category" class="form-control">
+                            <option value="phone">Điện thọai</option>
+                            <option value="PC">PC Gaming</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Other">Phụ kiện</option>
+                        </select>
+                        <br>
+                        <label for="detail">Chi tiết</label>
+                        <textarea name="detail" id="detail" class="form-control"></textarea>
+                        <br>
+                        <label for="delivery_date">Ngày giao hàng <span class="text-danger">*</span></label>
+                        <input type="date" name="delivery_date" class="form-control">
+                        <br>
+                        <label for="image" class="btn btn-primary">Chọn hình ảnh</label>
+                        <input type="file" name="image" id="image" value="" class="hide">
+                        <br>
+                        <label for="logistic_provider">Đơn vị vận chuyển <span class="text-danger">*</span></label>
+                        <select name="logistic_provider" id="logistic_provider" class="form-control">
+                            <option value="1">J&T Express</option>
+                            <option value="2">Shoppe Express</option>
+                            <option value="3">Viettel Post</option>
+                        </select>
+                        <br>
+                        <button type="submit" class="btn btn-primary float-right">Thêm mới</button>
+                        <button type="reset" class="btn btn-secondary mx-2 float-right">Hủy</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End content -->
+    </div>
+
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/jQueryValidate.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
