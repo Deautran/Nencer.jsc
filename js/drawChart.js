@@ -59,7 +59,7 @@ new Chart(_chartImportExportRatio, {
       }
     }
   });
-  /** 
+/** 
  * Draw line chart for interest rate
  * Find to div id chartInterestRate
 */
@@ -76,6 +76,32 @@ new Chart(_chartInterestRate, {
                 fill: false,
                 borderColor: 'rgb(255, 99, 132)',
                 tension: 0.1
+            }
+        ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+/** 
+ * Draw bar chart for in and out stock of month
+ * Find to div id chartByCategory
+*/
+const _chartByCategory = document.getElementById('chartByCategory');
+
+new Chart(_chartByCategory, {
+    type: 'bar',
+    data: {
+        labels: ['Laptop', 'PC', 'Dien thoai', 'Tivi', 'Phu kien'],
+        datasets: [
+            {
+                label: 'Tong don hang theo danh muc',
+                data: [120, 150, 180, 90, 200],
+                backgroundColor: 'rgba(54, 162, 235, 0.7)',
             }
         ]
     },

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nencer.JSC|Admin Panel</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div id="main">
+        <div class="row">
+            <!-- Begin sidebar -->
+            <div id="sidebar" class="col-md-2">
+                <div id="logo" class="text-center">
+                    <h3>Nencer.JSC</h3>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="dashbroad.html">Thống kê</a></li>
+                        <li><a href="category.html">Danh mục sản phẩm</a></li>
+                        <li><a href="storages.html">Quản lý kho</a></li>
+                        <li><a href="employees.html">Quản lý nhân viên</a></li>
+                        <li><a href="receipts.html">Hóa đơn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End sidebar-->
+            <!-- Main -->
+            <div class="col-md-10">
+                <!-- Begin header -->
+                <div id="header" class="col-md-12">
+                    <div class="row margin-top--15">
+                        <div class="col-md-2" id="header-left">
+                            <a href="dashbroad.html">Trang chủ</a>
+                        </div>
+                        <div class="col-md-8"></div>
+                        <div class="col-md-2" id="logout">
+                            <a href="logout.html">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End header -->
+                <div id="content">
+                    <div class="col-md-12">
+                        <h3 class="pt-4">Danh sách</h3>
+                        <a class="btn btn-primary float-right" href="storages.html">Danh sách</a>
+                        <div class="clear-fix"></div>
+                        <!-- Begin box add -->
+                        <div id="create_storage_box" class="card-section col-md-3">
+                            <h1 class="text-center">Thêm mới</h1>
+                            <br>
+                            <form action="server.java" method="post" id="login_form">
+                                <label for="name"><strong>Tên kho</strong> <span class="text-danger">*</span></label>
+                                <input type="text" name="name" placeholder="Kho Ha Dong" class="form-control">
+                                <br>
+                                <label for="cost"><strong>Phí duy trì</strong> <span class="text-danger">*</span></label>
+                                <input type="number" name="cost" min="1" placeholder="100000" class="form-control">
+                                <br>
+                                <button type="submit" class="btn btn-primary float-right">Thêm kho</button>
+                            </form>
+                        </div>
+                        <!-- End box add -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/jQueryValidate.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/drawChart.js"></script>
+  </body>
+</html>
