@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nencer.JSC|Admin Panel</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div id="main">
+        <div class="row">
+            <!-- Begin sidebar -->
+            <div id="sidebar" class="col-md-2">
+                <div id="logo" class="text-center">
+                    <h3>Nencer.JSC</h3>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="dashbroad.html">Thống kê</a></li>
+                        <li><a href="category.html">Danh mục sản phẩm</a></li>
+                        <li><a href="storages.html">Quản lý kho</a></li>
+                        <li><a href="employees.html">Quản lý nhân viên</a></li>
+                        <li><a href="receipts.html">Hóa đơn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End sidebar-->
+            <!-- Main -->
+            <div class="col-md-10">
+                <!-- Begin header -->
+                <div id="header" class="col-md-12">
+                    <div class="row margin-top--15">
+                        <div class="col-md-2" id="header-left">
+                            <a href="dashbroad.html">Trang chủ</a>
+                        </div>
+                        <div class="col-md-8"></div>
+                        <div class="col-md-2" id="logout">
+                            <a href="logout.html">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="col-md-12">
+                        <h3 class="pt-3">Quản lý kho: <span class="txt-storage-name">Kho ở Ngọc Trục</span></h3>
+                        <form action="" method="post" id="storage-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="storage-name">Tên kho <span class="text-danger">*</span></label>
+                                    <input type="text" required class="form-control" name="storage-name" value="Kho o Ngoc Truc">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="storage-name">Phí duy trì<span class="text-danger">*</span></label>
+                                    <input type="number" required class="form-control" name="cost" value="1">
+                                </div>
+                                <div class="col-md-3">
+                                    <br>
+                                    <button class="btn btn-primary">Chỉnh sửa</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-md-12 pt-4">
+                            <h4>Tổng số đơn hàng đã xử lý <strong>99</strong></h4>
+                        </div>
+                        <div class="col-md-12 pt-4">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <p>Các đơn hàng trong kho</p>
+                                </div>
+                                <div class="col-md-6"></div>
+                                <div class="col-md-4">
+                                    <form action="" method="get">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <input type="datetime-local" class="form-control" name="date">
+                                            </div>
+                                            <div class="col-md-5">
+                                                <button class="btn btn-primary">Xuất đơn hàng</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>Ten don hang</td>
+                                        <td>Danh muc</td>
+                                        <td>Tong chi phi</td>
+                                        <td>So san pham</td>
+                                        <td>Ngay giao</td>
+                                        <td>Ghi chu</td>
+                                        <td>Loai</td>
+                                        <td>Trang thai</td>
+                                        <td>Thao tac</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <form action="" method="post">
+                                            <td>1</td>
+                                            <td>iphone</td>
+                                            <td>dien thoai</td>
+                                            <td>1</td>
+                                            <td>12</td>
+                                            <td>2025-11-11</td>
+                                            <td>abc</td>
+                                            <td>Nhap</td>
+                                            <td>
+                                                <select class="form-control" name="" id="">
+                                                    <option value="0">Chưa xử lý</option>
+                                                    <option value="1">Đã xử lý</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary">Cập nhật</button>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/jQueryValidate.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/drawChart.js"></script>
+  </body>
+</html>
